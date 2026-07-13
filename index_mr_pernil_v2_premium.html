@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090909">
+<title>Mr Pernil Restaurant | Cúcuta</title>
+<meta name="description" content="Demo premium para Mr Pernil Restaurant. Hamburguesas de cerdo, parrilla y sabor en Cúcuta.">
+<style>
+:root{--bg:#090909;--surface:#121212;--line:#292929;--yellow:#ffc400;--text:#fff;--muted:#b8b8b8;--green:#25d366}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;overflow-x:hidden}
+a{text-decoration:none;color:inherit}.wrap{width:min(1120px,91%);margin:auto}.demo{padding:7px 15px;text-align:center;background:#171717;color:#aaa;font-size:11px;letter-spacing:.6px}
+nav{position:sticky;top:0;z-index:50;background:#090909e8;border-bottom:1px solid #222;backdrop-filter:blur(14px)}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:1000;letter-spacing:-1px;font-size:21px}.brand b{color:var(--yellow)}
+.menu{display:flex;gap:24px;color:#ccc;font-size:14px}.pill{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:14px 21px;font-weight:900;background:var(--yellow);color:#0b0b0b;transition:.2s}.pill:hover{transform:translateY(-2px)}
+.hero{min-height:calc(100svh - 98px);display:flex;align-items:center;position:relative;background:linear-gradient(90deg,#080808 5%,#080808dc 42%,#08080842),url("https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1900&q=90") center/cover}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:160px;background:linear-gradient(transparent,var(--bg))}
+.hero-content{position:relative;z-index:2;padding:70px 0 120px;max-width:760px}.kicker{color:var(--yellow);font-weight:950;text-transform:uppercase;letter-spacing:2.5px;font-size:13px}
+h1{font-size:clamp(55px,9vw,105px);line-height:.82;letter-spacing:-5px;margin:20px 0 25px;font-weight:1000}.hero p{max-width:570px;color:#e4e4e4;font-size:18px;line-height:1.65}
+.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:28px}.ghost{background:#ffffff10;color:#fff;border:1px solid #777;backdrop-filter:blur(8px)}
+.stats{position:relative;z-index:3;margin-top:-64px;display:grid;grid-template-columns:repeat(3,1fr);background:#141414;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.stat{padding:25px;text-align:center;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat strong{display:block;font-size:27px;color:var(--yellow)}.stat span{color:#aaa;font-size:13px}
+section{padding:90px 0}.head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:35px}.head h2{font-size:clamp(38px,6vw,66px);line-height:.95;letter-spacing:-3px;margin:8px 0}.head p{color:var(--muted);max-width:440px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--surface);border:1px solid var(--line);border-radius:24px;overflow:hidden;transition:.25s}.card:hover{transform:translateY(-5px);border-color:#555}
+.pic{height:235px;overflow:hidden}.pic img{width:100%;height:100%;object-fit:cover;transition:.5s}.card:hover img{transform:scale(1.05)}
+.body{padding:21px}.topline{display:flex;align-items:start;justify-content:space-between;gap:10px}.body h3{margin:0;font-size:22px}.price{font-weight:950;color:var(--yellow);white-space:nowrap}.body p{color:#aaa;line-height:1.5;font-size:14px;margin-bottom:0}
+.visit{background:#111}.visit-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:20px}.box,.map{border-radius:25px;border:1px solid var(--line);overflow:hidden}.box{background:#171717;padding:32px}.box h2{font-size:40px;letter-spacing:-2px;margin:8px 0 25px}
+.detail{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid #303030;color:#ddd;line-height:1.4}.detail:last-of-type{border:0}.icon{font-size:21px}
+.map{width:100%;min-height:470px;border:0}
+.cta{background:var(--yellow);color:#090909;border-radius:30px;padding:65px 25px;text-align:center}.cta h2{font-size:clamp(43px,8vw,82px);line-height:.9;letter-spacing:-4px;margin:0 0 20px}.cta p{font-size:17px}.cta .pill{background:#090909;color:#fff;margin-top:10px}
+footer{border-top:1px solid #222;padding:35px 0;color:#888}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:13px}
+.float{position:fixed;right:18px;bottom:18px;z-index:60;width:61px;height:61px;background:var(--green);border-radius:50%;display:grid;place-items:center;font-size:29px;box-shadow:0 10px 30px #0009;animation:pulse 2s infinite}
+.reveal{opacity:0;transform:translateY(24px);transition:.7s}.reveal.show{opacity:1;transform:none}
+@keyframes pulse{50%{box-shadow:0 0 0 10px #25d36622}}
+@media(max-width:800px){.menu{display:none}.hero{background-position:62% center}.hero-content{padding-top:55px}h1{letter-spacing:-3px}.stats{grid-template-columns:1fr;margin-top:-55px}.stat{border-right:0;border-bottom:1px solid var(--line);padding:18px}.head{display:block}.grid,.visit-grid{grid-template-columns:1fr}.pic{height:250px}section{padding:65px 0}.map{min-height:360px}.cta{padding:52px 20px}.cta h2{letter-spacing:-3px}}
+</style>
+</head>
+<body>
+<div class="demo">PROPUESTA WEB DEMOSTRATIVA · SITIO NO OFICIAL</div>
+<nav><div class="wrap nav"><a class="brand" href="#">MR <b>PERNIL</b></a><div class="menu"><a href="#favoritos">Favoritos</a><a href="#visitanos">Ubicación</a><a href="#pedido">Pedidos</a></div><a class="pill" href="https://wa.me/573008620783?text=Hola%2C%20quiero%20hacer%20un%20pedido" target="_blank">Pedir ahora</a></div></nav>
+
+<header class="hero"><div class="wrap hero-content">
+<div class="kicker">Mr Pernil · Cúcuta</div>
+<h1>PURO<br>SABOR.</h1>
+<p>Hamburguesas de cerdo, parrilla y antojos preparados para los que no vienen a comer poquito.</p>
+<div class="actions"><a class="pill" href="#favoritos">Ver favoritos</a><a class="pill ghost" href="https://www.google.com/maps/search/?api=1&query=Mr+Pernil+Restaurant+Cucuta" target="_blank">Cómo llegar ↗</a></div>
+</div></header>
+
+<div class="wrap"><div class="stats reveal">
+<div class="stat"><strong>4,6 ★</strong><span>Valoración pública</span></div>
+<div class="stat"><strong>600+</strong><span>Reseñas públicas</span></div>
+<div class="stat"><strong>Cúcuta</strong><span>Norte de Santander</span></div>
+</div></div>
+
+<section id="favoritos"><div class="wrap">
+<div class="head reveal"><div><span class="kicker">Favoritos de la casa</span><h2>¿QUÉ VAS<br>A PEDIR?</h2></div><p>Una selección de productos destacados basada en información pública del menú. Precios sujetos a actualización.</p></div>
+<div class="grid">
+<article class="card reveal"><div class="pic"><img loading="lazy" src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=900&q=85" alt="Hamburguesa"></div><div class="body"><div class="topline"><h3>Pernilita</h3><span class="price">$15.000</span></div><p>Cerdo al horno, cebolla, tomate, queso tipo mozzarella y pan de papa.</p></div></article>
+<article class="card reveal"><div class="pic"><img loading="lazy" src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=85" alt="Hamburguesa doble"></div><div class="body"><div class="topline"><h3>Super Doble</h3><span class="price">$22.000</span></div><p>160 g de cerdo al horno, cebolla, tomate, queso y pan de papa.</p></div></article>
+<article class="card reveal"><div class="pic"><img loading="lazy" src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=900&q=85" alt="Hamburguesa bacon"></div><div class="body"><div class="topline"><h3>Pulled Bacon</h3><span class="price">$22.000</span></div><p>Tocineta, queso cheddar americano, pan de papa y papas.</p></div></article>
+<article class="card reveal"><div class="pic"><img loading="lazy" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85" alt="Costillas"></div><div class="body"><div class="topline"><h3>Costillas al Barril</h3><span class="price">$40.000</span></div><p>Costilla ahumada al barril, terminada en parrilla, con ensalada y papa.</p></div></article>
+<article class="card reveal"><div class="pic"><img loading="lazy" src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=900&q=85" alt="Parrillada"></div><div class="body"><div class="topline"><h3>Parrillada</h3><span class="price">$31.000</span></div><p>Res, pollo, cerdo y chorizo acompañados con ensalada y papa.</p></div></article>
+<article class="card reveal"><div class="pic"><img loading="lazy" src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=85" alt="Papas"></div><div class="body"><div class="topline"><h3>Papas Locas</h3><span class="price">$16.000</span></div><p>Papa francesa, queso cheddar y tocineta crocante.</p></div></article>
+</div></div></section>
+
+<section class="visit" id="visitanos"><div class="wrap"><div class="visit-grid">
+<div class="box reveal"><span class="kicker">Visítanos</span><h2>MR PERNIL<br>RESTAURANT</h2>
+<div class="detail"><span class="icon">📍</span><span>Mz D14, lote 12<br>Cúcuta, Norte de Santander</span></div>
+<div class="detail"><span class="icon">📞</span><span>+57 300 862 0783</span></div>
+<div class="detail"><span class="icon">🕓</span><span>Domingo a jueves<br>4:30 p. m. – 10:30 p. m.</span></div>
+<div class="detail"><span class="icon">🔥</span><span>Viernes y sábado<br>4:30 p. m. – 11:00 p. m.</span></div>
+<div class="actions"><a class="pill" href="tel:+573008620783">Llamar</a><a class="pill ghost" href="https://www.google.com/maps/search/?api=1&query=Mr+Pernil+Restaurant+Cucuta" target="_blank">Abrir Maps</a></div>
+</div>
+<iframe class="map reveal" title="Ubicación de Mr Pernil Restaurant" loading="lazy" src="https://www.google.com/maps?q=Mr%20Pernil%20Restaurant%20Cucuta&output=embed"></iframe>
+</div></div></section>
+
+<section id="pedido"><div class="wrap"><div class="cta reveal">
+<h2>EL ANTOJO<br>NO ESPERA.</h2><p>Consulta disponibilidad, domicilios y realiza tu pedido.</p>
+<a class="pill" href="https://wa.me/573008620783?text=Hola%20Mr%20Pernil%2C%20quiero%20hacer%20un%20pedido" target="_blank">Pedir por WhatsApp →</a>
+</div></div></section>
+
+<footer><div class="wrap foot"><strong>MR PERNIL · PROPUESTA WEB</strong><span>Cúcuta, Colombia</span><span>Demo no oficial basada en información pública</span></div></footer>
+<a class="float" aria-label="WhatsApp" href="https://wa.me/573008620783?text=Hola%2C%20quiero%20hacer%20un%20pedido" target="_blank">💬</a>
+<script>
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>obs.observe(e));
+</script>
+</body>
+</html>
